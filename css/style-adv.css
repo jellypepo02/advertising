@@ -75,20 +75,131 @@
   position: absolute;
   width: 100%;
   top: 10px;
-  margin-left: 1.5rem;
+  left: 20px;
   display: inline-block;
   font-size: 80px;
   font-weight: 400;
   letter-spacing: 0.01em;
-  text-transform: uppercase;
-  text-align: center;
+  white-space: nowrap;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgba(0, 0, 0, 0.14);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #E8E8E8;
+  z-index: -1;
+  overflow: hidden;
 }
 
 /* Text content */
 .pptv-text p {
   font-size: 20px;
   line-height: 36px;
+}
+
+/* Chart */
+.pptv-chart {
+  position: relative;
+}
+.pptv-chart img {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
+}
+
+/* Pptv Statistic */
+.pptv-statistic .container {
+  display: flex;
+  padding: 0 20px;
+}
+.pptv-statistic .inner {
+  position: relative;
+  display: inline-flex;
+  width: auto;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: -120px;
+  background-color: #ffffff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.pptv-statistic .col-grid {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.pptv-statistic .box-quantity {
+  background-color: #FAFAFA;
+  padding: 2rem 3rem;
+}
+.pptv-statistic .box-quantity-social {
+  display: flex;
+  padding: 0 2rem;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+.pptv-statistic .group-social {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.pptv-statistic .group-social img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+.pptv-statistic .group-social:hover img {
+  transform: scale(1.2);
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.pptv-statistic .group-social .num {
+  color: #222222;
+  font-size: 24px;
+}
+.pptv-statistic .group-social .num span {
+  font-size: 20px;
+  color: #666666;
+  font-weight: 400;
+}
+
+/* Pptv Service */
+.pptv-service-web {
+  padding-top: 120px;
+}
+.pptv-service-web .pptv-service-web-grid {
+  height: auto;
+  padding: 4rem 0;
+  padding-right: 3rem;
+}
+.pptv-service-web .pptv-service-web-grid.card-blue {
+  background-color: #E7FBFD;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-top: 4rem;
+}
+.pptv-service-web .pptv-service-web-img {
+  position: relative;
+  left: -30px;
+}
+.pptv-service-web .pptv-service-web-text .title-head {
+  font-size: 40px;
+  font-weight: 600;
+  color: #222222;
+  text-transform: uppercase;
+}
+.pptv-service-web .pptv-service-web-text .title-average {
+  display: flex;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  color: #01b3c8;
+  font-size: 24px;
+  font-weight: 600;
+}
+.pptv-service-web .table-inner {
+  margin-top: 30px;
+}
+.pptv-service-web .table-inner img {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
 }/*# sourceMappingURL=style-adv.css.map */

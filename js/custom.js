@@ -22768,10 +22768,10 @@ and limitations under the License.
         var e, r;
         function i() {
             var e;
-            return (e = t.apply(this, arguments) || this).sections = e.el.querySelector(".we-feature-sections"),
-            e.section = e.el.querySelectorAll(".we-feature-section"),
-            e.navs = e.el.querySelector(".we-feature-navs"),
-            e.card = e.el.querySelectorAll(".we-feature-card"),
+            return (e = t.apply(this, arguments) || this).sections = e.el.querySelector(".pptv-service-web-sections"),
+            e.section = e.el.querySelectorAll(".pptv-service-web-section"),
+            e.navs = e.el.querySelector(".pptv-service-web-navs"),
+            e.card = e.el.querySelectorAll(".pptv-service-web-card"),
             e.createNav(),
             e.magicPin(),
             e.magicScrub(),
@@ -22789,11 +22789,11 @@ and limitations under the License.
             this.section.forEach((function(e, r) {
                 var i = document.createElement("div");
                 i.innerText = r + 1,
-                i.classList.add("we-feature-nav"),
+                i.classList.add("pptv-service-web-nav"),
                 t.navs.appendChild(i)
             }
             )),
-            this.nav = this.navs.querySelectorAll(".we-feature-nav"),
+            this.nav = this.navs.querySelectorAll(".pptv-service-web-nav"),
             this.nav[0].classList.add("-active")
         }
         ,
@@ -22919,8 +22919,8 @@ and limitations under the License.
         ,
         n.tlShow = function(t, e) {
             var r = Si.timeline()
-              , i = t.querySelectorAll(".we-feature-card")
-              , n = t.querySelectorAll(".we-feature-tag");
+              , i = t.querySelectorAll(".pptv-service-web-card")
+              , n = t.querySelectorAll(".pptv-service-web-img");
             return r.set(n, {
                 willChange: "transform"
             }),
@@ -25976,27 +25976,27 @@ and limitations under the License.
             component: Kl
         }, {
             namespace: "feature",
-            assign: ".we-feature",
+            assign: ".pptv-service-web",
             component: Jl
         }, {
             namespace: "overview",
-            assign: ".we-overview",
+            assign: ".pptv-social",
             component: function(t) {
                 var e, r;
                 function i() {
                     var e;
                     return (e = t.apply(this, arguments) || this).navbar = e.app.get("navbar"),
                     e.background = document.querySelector(".we-background"),
-                    e.body = e.el.querySelector(".we-overview-body"),
-                    e.image = e.el.querySelector(".we-overview-image"),
+                    e.body = e.el.querySelector(".pptv-social-body"),
+                    e.image = e.el.querySelector(".pptv-social-image"),
                     e.imageImg = e.image.querySelector("img"),
-                    e.description = e.el.querySelector(".we-overview-description"),
-                    e.tags = e.el.querySelector(".we-overview-tags"),
-                    e.actions = e.el.querySelector(".we-overview-actions"),
-                    e.carousel = e.el.querySelector(".we-overview-carousel"),
-                    e.items = e.el.querySelector(".we-overview-items"),
-                    e.grid = e.el.querySelector(".we-overview-grid"),
-                    e.header = e.el.querySelector(".we-overview-header"),
+                    e.description = e.el.querySelector(".pptv-social-col"),
+                    e.tags = e.el.querySelector(".pptv-social-tags"),
+                    e.actions = e.el.querySelector(".pptv-social-actions"),
+                    e.carousel = e.el.querySelector(".pptv-social-carousel"),
+                    e.items = e.el.querySelector(".pptv-social-group"),
+                    e.grid = e.el.querySelector(".pptv-social-grid"),
+                    e.header = e.el.querySelector(".pptv-social-header"),
                     e.headerImg = e.header.querySelectorAll("img"),
                     e.initCarousel(),
                     e.magicShow(),
@@ -26017,15 +26017,15 @@ and limitations under the License.
                     aa.matchMedia({
                         "(max-width:1199px)": function() {
                             return t.swiper = new Hh(t.carousel,{
-                                wrapperClass: "we-overview-items",
-                                slideClass: "we-overview-item",
+                                wrapperClass: "pptv-social-group",
+                                slideClass: "pptv-social-item",
                                 slideActiveClass: "-active",
                                 slidesPerView: "auto",
                                 grabCursor: !0,
                                 speed: 800,
                                 enabled: !0,
                                 scrollbar: {
-                                    el: ".we-overview-scrollbar",
+                                    el: ".pptv-social-scrollbar",
                                     draggable: !0
                                 }
                             }),
@@ -26133,7 +26133,7 @@ and limitations under the License.
                             aa.create({
                                 trigger: t.body,
                                 start: "top top",
-                                end: "300%",
+                                end: "100%",
                                 pin: !0
                             })
                         }
@@ -26167,43 +26167,7 @@ and limitations under the License.
                     })
                 }
                 ,
-                n.tlInverse = function() {
-                    var t = new Si.timeline;
-                    return t.to(this.background, {
-                        backgroundColor: "rgb(38, 35, 51)",
-                        duration: .15,
-                        ease: "none"
-                    }, .2),
-                    t.to([this.el, this.navbar.el], {
-                        color: "rgb(222, 229, 251)",
-                        duration: .15,
-                        ease: "none"
-                    }, .2),
-                    t.to(this.navbar.logoSvg, {
-                        fill: "rgb(222, 229, 251)",
-                        duration: .15,
-                        ease: "none"
-                    }, .2),
-                    t.to(this.background, {
-                        backgroundColor: "rgb(247, 248, 242)",
-                        duration: .15,
-                        ease: "none"
-                    }, .75),
-                    t.to([this.el, this.navbar.el], {
-                        color: "rgb(11, 30, 91)",
-                        duration: .15,
-                        ease: "none"
-                    }, .75),
-                    t.to(this.navbar.logoSvg, {
-                        fill: "rgb(11, 30, 91)",
-                        duration: .15,
-                        ease: "none"
-                    }, .75),
-                    t.add((function() {}
-                    ), 1),
-                    t
-                }
-                ,
+             
                 n.magicScrub = function() {
                     var t = this;
                     aa.saveStyles(this.grid),
